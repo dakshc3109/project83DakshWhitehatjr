@@ -7,6 +7,16 @@ var width = "2";
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
+ var width = screen.width;
+    var newWidth = screen.width - 70;
+    var newHeight = screen.height - 300;
+
+    if(width < 992){
+        document.getElementById("myCanvas").width = newWidth;
+        document.getElementById("myCanvas").height = newHeight;
+        document.body.style.overflow = "hidden";
+    }
+
 canvas.addEventListener("mousedown", my_mousedown);
 function my_mousedown(e){
     color = document.getElementById("color").value;
